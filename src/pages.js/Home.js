@@ -4,6 +4,7 @@ import { useState } from "react";
 // import { getStorage, ref, uploadBytes } from "firebase/storage";
 import { db } from '../firebase';
 import { collection, addDoc } from "firebase/firestore";
+import Nav from "../components/Nav";
 
 
 const QuoteKeeper = styled.div``
@@ -66,6 +67,7 @@ const Home = () => {
 
     return (
         <QuoteKeeper>
+            <Nav/>
             <TextContainer>
                 <p >{message}</p>
                 <TextEdit>

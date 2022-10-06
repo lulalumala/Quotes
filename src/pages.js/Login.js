@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useState } from "react";
 import { green } from "@mui/material/colors";
+import Nav from "../components/Nav";
 
 
 const LoginForm = styled.div`text-align: center; padding: 1em;`
@@ -52,6 +53,7 @@ const Login = () => {
     }
     return (
         <LoginForm>
+            <Nav/>
             <H>LOGIN</H>
             <P>{error.name }</P>
             <Input type="text" placeholder="Name" onChange={(e)=> setLoginInfo({...loginInfo, name:e.target.value})}/>

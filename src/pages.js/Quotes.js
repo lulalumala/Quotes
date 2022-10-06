@@ -7,14 +7,13 @@ import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import ThumbDownIcon from '@mui/icons-material/ThumbDownAlt';
 // import data from firestore
 import { collection, getDocs } from "firebase/firestore";
-
 import { db } from "../firebase";
 import Nav from "../components/Nav";
 
 
 const QuoteContainer = styled.div``
 const Card = styled.div`padding: 1em; width: 70%; box-shadow: 0 0 3px grey; margin: 0 auto;`;
-const P = styled.p`
+const P = styled.p`font-size: 2rem;
 color: ${props => {
         if (props.color === "red") {
             return "red"
@@ -27,7 +26,7 @@ color: ${props => {
 
 const LikeDiv = styled.div``
 const Button = styled.button`cursor: pointer;`
-const FetchButton=styled.button``
+const FetchButton = styled.button`background: rgba(255,255,255,.5); padding: 1em 2em; border-radius: 3px; border: none; font-size: 2rem; cursor: pointer; position: bottom 0; margin: 1em; font-weight: bold;`
 
 
 const Quotes = () => {
@@ -84,8 +83,8 @@ const Quotes = () => {
                 </LikeDiv>
 
 
+            <FetchButton onClick={handleFetch}>FETCH QUOTE</FetchButton>
             </Card>
-            <Button onClick={handleFetch}>FETCH QUOTE</Button>
         </QuoteContainer>
     )
 }
